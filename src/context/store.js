@@ -4,6 +4,7 @@ const useGameStore = create((set) => ({
   board: Array(9).fill(null),
   currentPlayer: "Player 1",
   score: { x: 0, o: 0 },
+  chat: [],
   gameResult: null,
 
   makeMove: (index) =>
@@ -41,6 +42,11 @@ const useGameStore = create((set) => ({
       gameResult: null,
       currentPlayer: "Player 1",
     }),
+
+  sendMessage: (message, player) =>
+    set((state) => ({
+      chat: [...state.chat, { message, player }],
+    })),
 }));
 
 // Helper function to check for winning condition
