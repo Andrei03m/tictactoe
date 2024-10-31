@@ -43,6 +43,15 @@ const useGameStore = create((set) => ({
       currentPlayer: "Player 1",
     }),
 
+  resetAction: () =>
+    set({
+      board: Array(9).fill(null),
+      gameResult: null,
+      currentPlayer: "Player 1",
+      score: { x: 0, o: 0 },
+      chat: [],
+    }),
+
   sendMessage: (message, player) =>
     set((state) => ({
       chat: [...state.chat, { message, player }],

@@ -64,25 +64,30 @@ Game Rules
 Project Structure
 
 tictactoe/
-├── public/
-│ ├── index.html
-│ └── favicon.ico
-├── src/
-│ ├── components/
-│ │ ├── GameBoard.js
-│ │ └── Chat.js
-│ ├── context/
-│ │ └── store.js
-│ ├── styles/
-│ │ └── styles.css
-│ ├── App.js
-│ ├── index.js
-│ └── ...
-├── .gitignore
-├── package.json
-├── README.md
-└── ...
-
-    components/: Contains React components for the game board and chat.
-    context/: Holds Zustand store for global state management.
-    styles/: Contains the main CSS file for styling.
+├── build/ # Build output folder for deployment
+├── node_modules/ # Node modules (auto-generated)
+├── public/ # Public files accessible by the app
+│ ├── index.html # Main HTML file
+│ └── favicon.ico # Favicon for the app
+├── src/ # Main source folder
+│ ├── components/ # Reusable components
+│ │ ├── Chat.jsx # Chat component for player communication
+│ │ ├── ResetButton.jsx # Button to reset game, score, and chat
+│ │ └── Scoreboard.jsx # Component to display the score
+│ ├── context/ # State management with Zustand
+│ │ └── store.js # Zustand store for managing game state
+│ ├── pages/ # Main game pages
+│ │ └── GameBoard.jsx # Game board component with main game logic
+│ ├── styles/ # Styles for the app
+│ │ ├── App.css # General app styles
+│ │ └── GameBoard.css # Styles specific to the game board
+│ ├── App.jsx # Main app component
+│ ├── App.test.js # Test file for the App component
+│ ├── index.css # Additional global styles
+│ ├── index.js # Entry point for React app
+│ ├── reportWebVitals.js # Web vitals reporting for performance
+│ └── setupTests.js # Test setup file for Jest
+├── .gitignore # Files and directories to ignore in Git
+├── package-lock.json # Auto-generated file with exact dependency version
+├── package.json # Project metadata and dependencies
+└── README.md # Project README with description and
