@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+Tic-Tac-Toe Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A classic Tic-Tac-Toe game built with React.js and Zustand for state management, designed with a responsive and interactive UI, and hosted on GitHub Pages.
 
-## Available Scripts
+Live Demo
 
-In the project directory, you can run:
+Try out the live version of the game here: [Tic-Tac-Toe on GitHub Pages](https://andrei03m.github.io/tictactoe/)
 
-### `npm start`
+Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Features
+    Technologies Used
+    Installation
+    Usage
+    Game Rules
+    Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Features
 
-### `npm test`
+    Turn-Based Gameplay: Each player can make a move only on their turn.
+    Dynamic UI Update: Both players' boards update simultaneously in real-time.
+    Scoreboard: Keeps track of each player's score.
+    Game Result Display: Shows the game result (win, lose, or draw) and automatically resets after 5 seconds.
+    Reset Button: Allows players to reset the game, clearing the board.
+    Chat Feature: Players can chat with each other during the game.
+    Responsive Design: Adjusts to various screen sizes for a better user experience on different devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Technologies Used
 
-### `npm run build`
+    React.js: A JavaScript library for building user interfaces.
+    Zustand: A minimal, unopinionated state management library for React.
+    CSS3: Custom styling for an interactive and visually appealing design.
+    GitHub Pages: For hosting the live demo of the game.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Clone the repository:
+    git clone https://github.com/andrei03m/tictactoe.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Navigate to the project directory:
+    cd tictactoe
 
-### `npm run eject`
+    Install dependencies:
+    npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Run the app locally:
+    npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    The app should now be running on http://localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    Open the game, and each player should take turns clicking on the grid to mark "X" or "O".
+    The board will automatically disable for the player who isn’t currently taking a turn.
+    The result (win, lose, or draw) will display at the end of each game, and scores will update accordingly.
+    Use the reset button to start a new round and clear the chat history.
 
-## Learn More
+Game Rules
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Objective: Get three of your symbols in a row, column, or diagonal.
+    Turn-Based Play: Only one player can play at a time. The board will indicate when it’s your turn.
+    Win Conditions: The game is won if a player gets three symbols in a row, column, or diagonal. A tie occurs if the board fills up without a winner.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Project Structure
 
-### Code Splitting
+tictactoe/
+├── public/
+│ ├── index.html
+│ └── favicon.ico
+├── src/
+│ ├── components/
+│ │ ├── GameBoard.js
+│ │ └── Chat.js
+│ ├── context/
+│ │ └── store.js
+│ ├── styles/
+│ │ └── styles.css
+│ ├── App.js
+│ ├── index.js
+│ └── ...
+├── .gitignore
+├── package.json
+├── README.md
+└── ...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    components/: Contains React components for the game board and chat.
+    context/: Holds Zustand store for global state management.
+    styles/: Contains the main CSS file for styling.
